@@ -28,11 +28,12 @@ $plats = lesPlatsLesPlusVendus();
   </head>
   
   <body>
-    <nav class="navbar navbar-expand-lg bg-success-subtle">
+  <nav class="navbar navbar-expand-lg bg-success-subtle">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
-          <img 
-            
+          <img
+          src="/public/images_the_district/the_district_brand/logo_transparent_sm.png" height="100px"
+            alt="logo"
             
             
           />
@@ -53,7 +54,7 @@ $plats = lesPlatsLesPlusVendus();
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link fs-3" href="#">Accueil</a>
+              <a class="nav-link fs-3" href="">Accueil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fs-3" href="categorie.php">Categorie</a>
@@ -62,7 +63,7 @@ $plats = lesPlatsLesPlusVendus();
               <a class="nav-link fs-3" href="plat.php">Plats</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-3">Contact</a>
+              <a class="nav-link fs-3" href="contact.php">Contact</a>
             </li>
             <li><a href=""></a><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
   <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>

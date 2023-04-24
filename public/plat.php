@@ -47,7 +47,7 @@ $plats = pagePlat();
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link fs-3" href="public/accueil.php">Accueil</a>
+              <a class="nav-link fs-3" href="accueil.php">Accueil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fs-3" href="categorie.php">Categorie</a>
@@ -56,7 +56,7 @@ $plats = pagePlat();
               <a class="nav-link fs-3" href="#">Plats</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-3">Contact</a>
+              <a class="nav-link fs-3" href="contact.php">Contact</a>
             </li>
           </ul>
         </div>

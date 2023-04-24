@@ -26,7 +26,7 @@ $categories = lesCategoriesActive();
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
-          src="/public/images_the_district/the_district_brand/logo_transparent_sm.png" height="200px"
+          src="/public/images_the_district/the_district_brand/logo_transparent_sm.png" height="100px"
             alt="logo"
             
           />
@@ -55,7 +55,7 @@ $categories = lesCategoriesActive();
               <a class="nav-link fs-3" href="plat.php">Plats</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-3">Contact</a>
+              <a class="nav-link fs-3" href="contact.php">Contact</a>
             </li>
           </ul>
         </div>
