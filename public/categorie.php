@@ -22,7 +22,7 @@ $categories = lesCategoriesActive();
     
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-success-subtle">
+    <nav class="navbar navbar-expand-lg " id="img_color">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img

@@ -6,6 +6,7 @@ $plats = lesPlatsLesPlusVendus();
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -28,7 +29,7 @@ $plats = lesPlatsLesPlusVendus();
   </head>
   
   <body>
-  <nav class="navbar navbar-expand-lg bg-success-subtle">
+  <nav class="navbar navbar-expand-lg " id="img_color">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
@@ -86,6 +87,7 @@ $plats = lesPlatsLesPlusVendus();
     <!---Les categories-->
     <div class="row row-cols-1 row-cols-md-3 g-4">
     <?php foreach ($categories as $categorie) :?>
+      <a href="categorie/categorie_<?=$categorie -> libelle?>.php">
       <div class="col">
         <div class="card">
           <img
@@ -98,13 +100,16 @@ $plats = lesPlatsLesPlusVendus();
           </div>
         </div>
       </div>
+      </a>
       <?php endforeach; ?>
     </div>
 
     <!--fin categorie-->
     <!--les plats accueil-->
+
      <div class="card-group ">
     <?php foreach ($plats as $plat):?>
+      <a href="plat.php">
       <div class="card m-3">
         <img
           src= "images_the_district/fooda_actuel/<?=$plat -> image?> "class="img-responsive mw-100"
@@ -115,6 +120,7 @@ $plats = lesPlatsLesPlusVendus();
           <h5 class="card-title"><?=$plat -> libelle?></h5>
         </div>
       </div>
+      </a>
       <?php endforeach; ?>
     </div> 
     <!--fin plats-->

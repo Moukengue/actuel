@@ -98,4 +98,20 @@ function listeChifaffaire(){
         $requete->closeCursor();
     }
 }
+
+function categoriePasta(){
+    if(require("../db.php")){
+        $requete =  $db->query("SELECT *FROM plat 
+        INNER JOIN categorie
+        ON plat.id_categorie = categorie.id
+        WHERE categorie.libelle like 'Pasta'; ");
+       
+
+        $plats= $requete->fetchAll(PDO::FETCH_OBJ);
+        $requete->closeCursor();
+    }
+}
+
+
+
 ?>

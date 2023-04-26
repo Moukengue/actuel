@@ -1,6 +1,6 @@
+
 <?php
 include "DAO.php";?>
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -18,28 +18,15 @@ include "DAO.php";?>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Inscription</title>
+    <title>Connexion</title>
 </head>
+
 <body class="modif">
-<form class="form_contact" method="POST" action="inscription_script.php">
-          <h5 align="center">Inscription</h5>
-        <h1>Merci de nous avoir choisi!</h1>
+<form class="form_contact" method="POST" action="login_script.php">
+         <h5 align="center">Connexion</h5>
+        <h1>Bienvenue sur notre site</h1>
         <div class="separation"></div>
             <div class="corps-formulaire">
-                <!--nom-->
-                <div class="gauche">
-                   <div class="groupe">
-                <label for="nom">Votre nom</label>
-                <input type="text" id="nom" name="nom" placeholder="Macosso" required>
-                <i class="fa-solid fa-user"></i>
-                </div>
-                <!--prenom-->
-                <div class="groupe">
-                <label for="nom">Votre prenom</label>
-                <input class="inscrip" type="text" id="prenom" name="prenom" placeholder="Ervine" require> 
-                <i class="fa-solid fa-user"></i>
-            </div>
-            </div>
                 <!--Mail-->
                 <div class="gauche">
                     <div class="groupe">
@@ -60,10 +47,14 @@ include "DAO.php";?>
         </div>
         <div class="pied-formulaire" align="center">
         <input type="submit" id="submitbtn" name="submit" value="Valider" required>
-        <span class="enregistrer">Avez-vous deja un compte?</span><a href="connexion.php">Connexion</a></span>
+       <span class="enregistrer">Premiere connexion?</span><a href="inscription.php">Créer mon compte</a></span>
         </div>
     </form>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>
-
-

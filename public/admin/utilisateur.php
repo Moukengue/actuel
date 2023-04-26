@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,5 +17,38 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Connexion</title>
+    <title>Admin</title>
 </head>
+<body>
+<h1>Admin The Distric</h1>
+<div class="division"></div>
+    <div class="menu">
+        <div class="spa">
+
+        </div>
+
+    </div>
+    <!--meio da pagina-->
+    <div class="meio">
+        <div class="pagine">
+        <h1>The Distric</h1>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </table>
+        </div>
+    </div>
+    
+    <!--footer-->
+    <div class="footer">
+            <div class="wrapper">
+                <p class="text-center">2023 Deleloppé par-Moukengue Aline <a href="#">Vivi</a></p>
+                
+</div>
+</body>
+</html>

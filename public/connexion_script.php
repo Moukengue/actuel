@@ -1,7 +1,7 @@
 <?php
 
 session_start();
- include "db.php";
+ include "DAO.php";
  $db=connexionbase();
 if(isset($_POST['submit'])){ 
 
@@ -14,10 +14,9 @@ if(isset($_POST['submit'])){
         $recupUser->execute(array($email,$mdp));
         if($recupUser->rowcount() > 0){
             $_SESSION['email'] = $email;
-            $_SESSION['mdp'] = $mdp;
             $_SESSION['id'] = $recupUser->fetch()['id'];
           
-           header('Location: disc.php');
+           header('Location: accueil.php');
            exit;
  
  
