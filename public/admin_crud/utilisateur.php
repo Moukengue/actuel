@@ -1,5 +1,9 @@
 <?php
-
+include "../../db.php";
+$db = connexionBase();
+$requete = $db->query("SELECT * FROM utilisateur;");
+$utilisateurs = $requete->fetchAll(PDO::FETCH_OBJ);
+$requete->closeCursor();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -20,7 +24,8 @@
     <title>Admin</title>
 </head>
 <body>
-<h1>Admin The Distric</h1>
+<h3>Admin Utilisateur</h3>
+<i class="fa-solid fa-users"></i>
 <div class="division"></div>
     <div class="menu">
         <div class="spa">
@@ -32,13 +37,34 @@
     <div class="meio">
         <div class="pagine">
         <h1>The Distric</h1>
-        <table>
+        <table class= "tbl-full">
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
                 <th>Prenom</th>
                 <th>Email</th>
-                <th>Password</th>
+                <th>Numero</th>
+
+                <th>Action</th>
+                <?php foreach ($utilisateurs as $utilisateur) :?>
+                <tr>
+                    <td><?=$utilisateur-> id?></td>
+                    <td><?=$utilisateur-> nom?></td>
+                    <td><?=$utilisateur -> prenom?></td>
+                    <td><?=$utilisateur -> email?>l</td>
+                    <td><?=$utilisateur-> numero?></td>
+                    <td>
+                        <a href="" class="update">Modifier</a>
+                        <i class="fa-solid fa-pen-to-square fa-beat fa-xs"></i>
+                        <a href="" class="delete">Supprimer</a><i class="fa-sharp fa-solid fa-delete-right fa-bounce fa-sm"></i>
+                        
+                        </td>
+                        
+                        
+                        
+                    
+                </tr>
+                <?php endforeach; ?>
             </tr>
         </table>
         </div>
@@ -50,5 +76,10 @@
                 <p class="text-center">2023 Deleloppé par-Moukengue Aline <a href="#">Vivi</a></p>
                 
 </div>
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>

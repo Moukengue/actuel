@@ -167,4 +167,43 @@ form .pied-formulaire button:hover {
 .meio{
     background-color:#dfe4ea ;
 }
+/*adminutilisateur*/
+.tbl-full{
+    width: 100%;
+
+}
+
+table tr th{
+    border-bottom: 1px solid #f0932b;
+    padding: 1%;
+    text-align: left;
+}
+/*--bouton-->*/
+.update{
+    background-color:#3498db;
+    padding: 1px;
+    color: #dfe4ea;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+.update:hover{
+    background-color:#3498db;
+}
+
+.delete{
+    background-color:#c0392b;
+    padding: 1px;
+    color: #dfe4ea;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+.delete:hover{
+    background-color:#c0392b;
+}
+
+
+
+
 

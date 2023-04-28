@@ -1,6 +1,6 @@
 <?php
-include "DAO.php";
-$categories = afficherCategoriesPopulaire();
+include "./public/DAO.php";
+
 $plats = lesPlatsLesPlusVendus();
 // $cat = afficherCategories();
 
@@ -86,12 +86,14 @@ $plats = lesPlatsLesPlusVendus();
     </form>
     <!---Les categories-->
     <div class="row row-cols-1 row-cols-md-3 g-4">
-    <?php foreach ($categories as $categorie) :?>
-      <a href="categorie/categorie_<?=$categorie -> libelle?>.php">
+    <?php 
+    $categories = afficherCategoriesPopulaire();
+    foreach ($categories as $categorie) :?>
+      <a href="./public/categorie_detail.php?categorie_id=<?php echo $categorie -> id; ?>">
       <div class="col">
         <div class="card">
           <img
-            src="images_the_district/category_actuel/<?=$categorie -> image?>"
+            src="./public/images_the_district/category_actuel/<?=$categorie -> image?>"
             class=""
             alt="..."
          />

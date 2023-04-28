@@ -1,5 +1,5 @@
 <?php
-require "../db.php";
+require "db.php";
 function afficherCommandes(){
     if(require("db.php")){
         $requete =  $db->query("SELECT date_commande,nom_client,telephone_client,email_client,adresse_client,prix FROM commande
@@ -42,6 +42,19 @@ function afficherCategoriesPopulaire(){
         return $categoriesPopulaire;
 
 }
+
+///afficher tous le splats par categorie (l'id de la catégorie est passé en paramètre)
+
+function afficherTousLesPlarParCategorie($categorie_id){
+    $db = ConnexionBase();
+    $requete = $db->prepare("SELECT * FROM plat WHERE id_categorie = :id_categorie");
+    $requete->bindValue(':id_categorie', $categorie_id);
+    $requete->execute();
+    $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
+
+    return $tableau;
+}
+
        /*a liste des plats les plus vendus*/
 function lesPlatsLesPlusVendus(){
         $db = ConnexionBase();
