@@ -2,29 +2,32 @@
 include('DAO.php');
 include('../header.php');
 
-if (isset($_GET["categorie_id"])){
-    //var_dump($_GET["categorie_id"]);
+if (isset($_GET["plat_id"])){
+    //var_dump($_GET["plat_id"]);
 
-    $categorie = $_GET["categorie_id"];
+    $plat_id = $_GET["plat_id"];
 
 
 }
-$mon_resultat_plats = afficherTousLesPlarParCategorie($categorie);
-
+// $mon_plat = afficherTousLesDetailsParPlat($plat);
+$mon_plats = afficherLesPlats($plat_id);
 ?>
+
+
+
 
 <div class="row">
   <div class="mt-5">
     <h4>
-      Tous les plats de la catégorie <?php echo $mon_resultat_plats[0]->categorie_libelle ?>
+      <!-- Tous les plats<?php echo $mon_plats[0]->plat_libelle ?> -->
   </h4>
   </div>
   <?php
-foreach ($mon_resultat_plats as $plat) :?>
+foreach ($mon_plats as $plat) :?>
   
   <div class="col-md-4 col-xs-12">
     <!-- <div class="card"> -->
-    <a href="./public/categorie_detail.php?categorie_id=<?php echo $plat -> id; ?>">
+    <a href="./public/categorie_detail.php?plat_id=<?php echo $plat -> id; ?>">
       <img
         src="./images_the_district/fooda_actuel/<?=$plat-> image?>"
         class="img-responsive mw-100" style="width:400px;"
@@ -39,6 +42,3 @@ foreach ($mon_resultat_plats as $plat) :?>
   </div>
   <?php endforeach; ?>
 </div>
-
-  
-

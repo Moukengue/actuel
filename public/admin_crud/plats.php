@@ -1,5 +1,6 @@
 <?php
-include "../../db.php";
+include "../db.php";
+
 $db = connexionBase();
 $requete = $db->query("SELECT plat.id,plat.libelle,plat.description,plat.prix,plat.image,plat.id_categorie,plat.active FROM plat;");
 $plats = $requete->fetchAll(PDO::FETCH_OBJ);
@@ -53,7 +54,7 @@ $requete->closeCursor();
                     <td><?=$plat-> id?></td>
                     <td><?=$plat-> libelle?></td>
                     <td><?=$plat -> description?></td>
-                    <td><?=$plat -> prix?></td>
+                    <td><?=$plat -> prix?>€</td>
                     <td><?=$plat-> image?></td>
                     <td><?=$plat-> id_categorie?></td>
                     <td><?=$plat-> active?></td>

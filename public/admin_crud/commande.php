@@ -1,6 +1,6 @@
 <?php
 
-include "../../db.php";
+include "../db.php";
 $db = connexionBase();
 $requete = $db->query("SELECT commande.id,commande.id_plat,commande.quantite,commande.total,commande.date_commande,commande.etat,commande.nom_client,commande.telephone_client
 ,commande.email_client,commande.adresse_client FROM commande;");

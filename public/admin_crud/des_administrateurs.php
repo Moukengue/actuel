@@ -20,7 +20,67 @@
     <title>Admin</title>
 </head>
 <body>
-<h1>Admin The Distric</h1>
+
+<nav class="navbar navbar-expand-lg " id="img_color">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+          src="/public/images_the_district/the_district_brand/logo_transparent_sm.png" height="100px"
+            alt="logo"
+            
+            
+          />
+          
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link fs-3" href="admin_crud/categorie.php">Categorie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-3" href="admin_crud/plats.php">Plats</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-3" href="admin_crud/utilisateur.php">Utilisateur</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-3" href="admin_crud/commande.php">Commande</a>
+            </li>
+
+      
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="mt-3 mb-3 p-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 mx-auto p-3" style="background-color:purple" >
+        <form method="post" action="resultats_recherche.php" class="d-flex" role="search">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Recherche"
+        aria-label="Search"
+      />
+    </form>
+        </div>
+      </div>
+    
+    </div>
 <div class="division"></div>
     <div class="menu">
         <div class="spa">
@@ -32,50 +92,8 @@
     <div class="meio">
         <div class="pagine">
         <h1>The Distric</h1>
-        <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="public/admin_crud/categorie.php">Categorie</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="public/admin_crud/plats.php">Plats</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="public/admin_crud/utilisateur.php">Utilisateur</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="public/admin_crud/commande.php">Commande</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Lien déroulant
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Connexion</a></li>
-            <li><a class="dropdown-item" href="public/admin_crud/des_administrateurs.php">Administrateurs</a></li>
-            <li><a class="dropdown-item" href="#">Clients</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div lass="form-group">
-<label for="text">Nom</label>
-        <input type="text" id="nom" name="nom" placeholder="Moukengue" required>
-</div>
-<!--prenom-->
-<div class="form-group">
-                <label for="nom">Votre prenom</label>
-                <input class="inscrip" type="text" id="prenom" name="prenom" placeholder="Aline" require> 
-                
-            </div>
- 
-        </div >
-        
+       
+
     </div>
     
     <!--footer-->

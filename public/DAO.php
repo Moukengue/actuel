@@ -47,13 +47,32 @@ function afficherCategoriesPopulaire(){
 
 function afficherTousLesPlarParCategorie($categorie_id){
     $db = ConnexionBase();
-    $requete = $db->prepare("SELECT * FROM plat WHERE id_categorie = :id_categorie");
+    $requete = $db->prepare("SELECT plat.id, plat.libelle, plat.description, plat.prix, plat.image, categorie.libelle as categorie_libelle 
+                            FROM plat 
+                            JOIN categorie ON plat.id_categorie = categorie.id
+                            WHERE id_categorie = :id_categorie");
     $requete->bindValue(':id_categorie', $categorie_id);
     $requete->execute();
     $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
 
     return $tableau;
 }
+//afficher les plats pour le fichier plat_detail.php l'id du plat est en paramétre
+function afficherLesPlats($plat_id){
+    $db = ConnexionBase();
+    $requete =  $db->prepare("SELECT libelle,image FROM plat
+    where id = :id_plat;");
+       
+    $requete->bindValue(':id_plat', $plat_id);
+     $requete->execute();
+    $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
+
+    return $tableau;
+
+        
+        
+    }
+
 
        /*a liste des plats les plus vendus*/
 function lesPlatsLesPlusVendus(){
@@ -76,7 +95,7 @@ function lesCategoriesActive(){
         return $lesCategoriesActive;
 }
 /*afficher 6 plats avec le libellé, la description, le prix et un bouton qui permette de passer une commande.*/
-function pagePlat(){
+function affichePlat(){
     $db = ConnexionBase();
     $requete =  $db->query(" SELECT *FROM plat  LIMIT 6; ");
 
@@ -124,6 +143,8 @@ function categoriePasta(){
         $requete->closeCursor();
     }
 }
+
+
 
 
 

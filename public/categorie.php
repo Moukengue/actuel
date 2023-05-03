@@ -46,7 +46,7 @@ $categories = lesCategoriesActive();
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link fs-3" href="accueil.php">Accueil</a>
+              <a class="nav-link fs-3" href="../accueil.php">Accueil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fs-3" href="#">Categorie</a>
@@ -61,7 +61,10 @@ $categories = lesCategoriesActive();
         </div>
       </div>
     </nav>
-    <form class="d-flex" role="search">
+    <div class="mt-3 mb-3 p-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 mx-auto p-3" style="background-color:purple" >
+        <form method="post" action="resultats_recherche.php" class="d-flex" role="search">
       <input
         class="form-control me-2"
         type="search"
@@ -69,6 +72,10 @@ $categories = lesCategoriesActive();
         aria-label="Search"
       />
     </form>
+        </div>
+      </div>
+    
+    </div>
     <!---Les categories-->
     <div class="row row-cols-1 row-cols-md-3 g-4">
     <?php foreach ($categories as $categorie) :?>

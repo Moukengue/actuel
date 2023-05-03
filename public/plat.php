@@ -1,6 +1,6 @@
 <?php
 include "DAO.php";
-$plats = pagePlat();
+$plats = affichePlat();
 
 // $cat = afficherplats();
 
@@ -47,7 +47,7 @@ $plats = pagePlat();
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link fs-3" href="accueil.php">Accueil</a>
+              <a class="nav-link fs-3" href="../accueil.php">Accueil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fs-3" href="categorie.php">Categorie</a>
@@ -62,7 +62,10 @@ $plats = pagePlat();
         </div>
       </div>
     </nav>
-    <form class="d-flex" role="search">
+    <div class="mt-3 mb-3 p-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 mx-auto p-3" style="background-color:purple" >
+        <form method="post" action="resultats_recherche.php" class="d-flex" role="search">
       <input
         class="form-control me-2"
         type="search"
@@ -70,7 +73,12 @@ $plats = pagePlat();
         aria-label="Search"
       />
     </form>
+        </div>
+      </div>
+    
+    </div>
     <!---Les plats-->
+    <a href="">
     <div class="row row-cols-1 row-cols-md-3 g-4">
     <?php foreach ($plats as $plat):?>
       <div class="col">
@@ -81,10 +89,14 @@ $plats = pagePlat();
             alt="..."
           />
           <div class="card-body" style="width: 500px">
-            <h5 class="card-title"><?=$plat -> libelle?></h5>
+            <h4 class="card-title"><?=$plat -> libelle?></h4>
+            <h5 class=""><?=$plat -> description?></h5>
+            <h6><?=$plat -> prix?>€</h6>
+            <button type="button" class="btn btn-outline-primary">Commande</button>
           </div>
         </div>
       </div>
+      </a>
       <?php endforeach; ?>
     </div>
 

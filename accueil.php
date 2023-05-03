@@ -1,7 +1,7 @@
 <?php
 include "./public/DAO.php";
 
-$plats = lesPlatsLesPlusVendus();
+
 // $cat = afficherCategories();
 
 ?>
@@ -58,13 +58,13 @@ $plats = lesPlatsLesPlusVendus();
               <a class="nav-link fs-3" href="">Accueil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-3" href="categorie.php">Categorie</a>
+              <a class="nav-link fs-3" href="public/categorie.php">Categorie</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-3" href="plat.php">Plats</a>
+              <a class="nav-link fs-3" href="public/plat.php">Plats</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-3" href="contact.php">Contact</a>
+              <a class="nav-link fs-3" href="public/contact.php">Contact</a>
             </li>
             <li><a href=""></a><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
   <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
@@ -76,7 +76,10 @@ $plats = lesPlatsLesPlusVendus();
       </div>
     </nav>
     
-    <form class="d-flex" role="search">
+    <div class="mt-3 mb-3 p-5">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 mx-auto p-3" style="background-color:purple" >
+        <form method="post" action="resultats_recherche.php" class="d-flex" role="search">
       <input
         class="form-control me-2"
         type="search"
@@ -84,6 +87,11 @@ $plats = lesPlatsLesPlusVendus();
         aria-label="Search"
       />
     </form>
+        </div>
+      </div>
+    
+    </div>
+    
     <!---Les categories-->
     <div class="row row-cols-1 row-cols-md-3 g-4">
     <?php 
@@ -110,13 +118,15 @@ $plats = lesPlatsLesPlusVendus();
     <!--les plats accueil-->
 
      <div class="card-group ">
-    <?php foreach ($plats as $plat):?>
-      <a href="plat.php">
+     <?php
+     $plats = lesPlatsLesPlusVendus();
+     foreach ($plats as $plat):?>
+      <a href="public/plat_detail.php?plat_id=<?php echo $plat->id; ?>">
       <div class="card m-3">
         <img
-          src= "images_the_district/fooda_actuel/<?=$plat -> image?> "class="img-responsive mw-100"
+          src= "./public/images_the_district/fooda_actuel/<?=$plat ->image;?> "class="img-responsive mw-100"
           class="card-img-top"
-          alt="..."
+          
         />
         <div class="card-body">
           <h5 class="card-title"><?=$plat -> libelle?></h5>

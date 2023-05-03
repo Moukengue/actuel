@@ -1,5 +1,5 @@
 <?php
-include "../../db.php";
+include "../db.php";
 $db = connexionBase();
 $requete = $db->query("SELECT * FROM utilisateur;");
 $utilisateurs = $requete->fetchAll(PDO::FETCH_OBJ);
@@ -25,7 +25,7 @@ $requete->closeCursor();
 </head>
 <body>
 <h3>Admin Utilisateur</h3>
-<i class="fa-solid fa-users"></i>
+
 <div class="division"></div>
     <div class="menu">
         <div class="spa">
@@ -36,7 +36,7 @@ $requete->closeCursor();
     <!--meio da pagina-->
     <div class="meio">
         <div class="pagine">
-        <h1>The Distric</h1>
+        <i class="fa-solid fa-users"></i>
         <table class= "tbl-full">
             <tr>
                 <th>Id</th>
