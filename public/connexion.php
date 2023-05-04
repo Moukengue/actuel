@@ -22,7 +22,7 @@ include "DAO.php";?>
 </head>
 
 <body class="modif">
-<form class="form_contact" method="POST" action="login_script.php">
+<form class="form_contact" method="POST" action="connexion_script.php">
          <h5 align="center">Connexion</h5>
         <h1>Bienvenue sur notre site</h1>
         <div class="separation"></div>

@@ -202,7 +202,23 @@ table tr th{
 .delete:hover{
     background-color:#c0392b;
 }
+ /* button connexion */
+ button.btn{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-top:  0;
+    background-color:transparent;
+    color: #4b7bec;
+    border: 1px solid transparent;
+    transition: border-color .3s;
+    position: relative ;
+    right: 0px;
+}
 
-
-
+.lili{
+    display: flex;
+    justify-content: space-between;
+}
 
