@@ -1,6 +1,6 @@
 <?php
 
-include "../../db.php";
+include "../db.php";
 $db = connexionBase();
 $requete = $db->query("SELECT id,libelle,image,active FROM categorie;");
 $categories = $requete->fetchAll(PDO::FETCH_OBJ);
