@@ -9,9 +9,10 @@ if (isset($_GET["categorie_id"])){
 
 
 }
-$mon_resultat_plats = afficherTousLesPlarParCategorie($categorie);
+$mon_resultat_plats = afficherTousLesPlatsParCategorie($categorie);
 
 ?>
+<?php include_once('../menu.php'); ?>
 
 <div class="row">
   <div class="mt-5">
@@ -20,11 +21,13 @@ $mon_resultat_plats = afficherTousLesPlarParCategorie($categorie);
   </h4>
   </div>
   <?php
+  // var_dump($mon_resultat_plats);
+
 foreach ($mon_resultat_plats as $plat) :?>
   
   <div class="col-md-4 col-xs-12">
     <!-- <div class="card"> -->
-    <a href="./public/categorie_detail.php?categorie_id=<?php echo $plat -> id; ?>">
+    <a href="plat_detail.php?plat_id=<?php echo $plat -> id; ?>">
       <img
         src="./images_the_district/fooda_actuel/<?=$plat-> image?>"
         class="img-responsive mw-100" style="width:400px;"
@@ -39,6 +42,7 @@ foreach ($mon_resultat_plats as $plat) :?>
   </div>
   <?php endforeach; ?>
 </div>
+<?php include_once('../footer.php') ?>
 
   
 

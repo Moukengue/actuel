@@ -45,7 +45,7 @@ function afficherCategoriesPopulaire(){
 
 ///afficher tous le splats par categorie (l'id de la catégorie est passé en paramètre)
 
-function afficherTousLesPlarParCategorie($categorie_id){
+function afficherTousLesPlatsParCategorie($categorie_id){
     $db = ConnexionBase();
     $requete = $db->prepare("SELECT plat.id, plat.libelle, plat.description, plat.prix, plat.image, categorie.libelle as categorie_libelle 
                             FROM plat 
@@ -57,10 +57,10 @@ function afficherTousLesPlarParCategorie($categorie_id){
 
     return $tableau;
 }
-//afficher les plats pour le fichier plat_detail.php l'id du plat est en paramétre
+//afficher les détails d'un plat pour le fichier plat_detail.php l'id du plat est en paramétre
 function afficherLesPlats($plat_id){
     $db = ConnexionBase();
-    $requete =  $db->prepare("SELECT libelle,image FROM plat
+    $requete =  $db->prepare("SELECT id, libelle, description, image FROM plat
     where id = :id_plat;");
        
     $requete->bindValue(':id_plat', $plat_id);
@@ -87,7 +87,7 @@ function lesPlatsLesPlusVendus(){
       /*afficher les catégories "actives" (afficher un nombre maximum de 6 catégories )*/
 function lesCategoriesActive(){
         $db = ConnexionBase();
-        $requete =  $db->query(" SELECT libelle,image FROM  categorie 
+        $requete =  $db->query(" SELECT id, libelle,image FROM  categorie 
         WHERE categorie .active = 'yes' limit 6;");
         
         $lesCategoriesActive = $requete->fetchAll(PDO::FETCH_OBJ);
@@ -143,9 +143,96 @@ function categoriePasta(){
         $requete->closeCursor();
     }
 }
+//les functions du dossier admin.supprimer_categorie
+function supprimer_categorie($id){
+    $db = ConnexionBase();
+    try {
+        // Construction de la requête DELETE sans injection SQL :
+        $requete = $db->prepare("DELETE FROM categorie WHERE id = ?");
+        $requete->execute(array($id));
+        $requete->execute();
+        $requete->closeCursor();
+    }
+    catch (Exception $e) {
+        echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
+        die("Fin du script (script_categorie_delete.php)");
+    }
+}
+//supprime les plat_admin
+function supprimer_plats($id){
+    $db = ConnexionBase();
+    try {
+        // Construction de la requête DELETE sans injection SQL :
+        $requete = $db->prepare("DELETE FROM plat WHERE id = ?");
+        $requete->execute(array($id));
+        $requete->execute();
+        $requete->closeCursor();
+    }
+    catch (Exception $e) {
+        echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
+        die("Fin du script (script_plat_delete.php)");
+    }
+}
+//supprime les utilisateur_admin
+function supprimer_utilisateur($id){
+    $db = ConnexionBase();
+    try {
+        // Construction de la requête DELETE sans injection SQL :
+        $requete = $db->prepare("DELETE FROM utilisateur WHERE id = ?");
+        $requete->execute(array($id));
+        $requete->execute();
+        $requete->closeCursor();
+    }
+    catch (Exception $e) {
+        echo "Erreur : " . $requete->errorInfo()[2] . "<br>";
+        die("Fin du script (script_utilisateur_delete.php)");
+    }
+}
+// form_categorie
+function get_categorie($id){
+    if (!(isset($id)) || intval($id) <= 0){
+        return null;
+    }else{
+        $db = ConnexionBase();
+        $requete =  $db->prepare("SELECT * FROM categorie WHERE id = ?");
+        $requete->execute(array($id));
+        $categorie = $requete->fetch(PDO::FETCH_OBJ);
+        $requete->closeCursor();
+        return $categorie;
+    }
+}
+//form_plat
+function get_plat($id){
+    if (!(isset($id)) || intval($id) <= 0){
+        return null;
+    }else{
+        $db = ConnexionBase();
+        $requete =  $db->prepare("SELECT * FROM plat WHERE id = ?");
+        $requete->execute(array($id));
+        $plat = $requete->fetch(PDO::FETCH_OBJ);
+        $requete->closeCursor();
+        return $plat;
+    }
+}
+
+//chercher plat par mot saisi
+function cherche_plat($recherche){
+    $db = ConnexionBase();
 
 
+    $search1 = '%' . $recherche . '%';
+    $search2 = '%' . $recherche . '%';
 
+    $requete = $db->prepare("Select * from plat where libelle like :search1 or description like :search2");
+    $requete->bindValue(':search1', $search1);
+    $requete->bindValue(':search2', $search2);
+
+    $requete->execute();
+    $resultat = $requete->fetchAll(PDO::FETCH_OBJ);
+    return $resultat;
+
+
+}
 
 
 ?>

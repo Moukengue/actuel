@@ -163,10 +163,7 @@ form .pied-formulaire button:hover {
 .spa{
     margin:1% 0
 }
-/*meioDapgina*/
-.meio{
-    background-color:#dfe4ea ;
-}
+
 /*adminutilisateur*/
 .tbl-full{
     width: 100%;
@@ -181,7 +178,8 @@ table tr th{
 /*--bouton-->*/
 .update{
     background-color:#3498db;
-    padding: 1px;
+    padding: 5px;
+    margin: 10px;
     color: #dfe4ea;
     text-decoration: none;
     font-weight: bold;
@@ -193,7 +191,8 @@ table tr th{
 
 .delete{
     background-color:#c0392b;
-    padding: 1px;
+    padding: 5px;
+    margin: 10px;
     color: #dfe4ea;
     text-decoration: none;
     font-weight: bold;

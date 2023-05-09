@@ -1,6 +1,16 @@
-<?php
-if(isset($_POST['id']) && $_POST['id'] != ""){
-    $id= $nom;
-}else{
-    $id = null;
-}
+<?php 
+
+// Contrôle de l'ID (si inexistant ou <= 0, retour à la liste) :
+if (!(isset($_GET['id'])) || intval($_GET['id']) <= 0) GOTO TrtRedirection;
+$id = $_GET['id'];
+
+// Si la vérification est ok :
+  
+    include "../../DAO.php";
+    supprimer_utilisateur($id);
+
+// Si OK: redirection vers la page des_administrateurs.php
+TrtRedirection:
+header("Location: ../utilisateur_admin.php");
+exit;
+?>

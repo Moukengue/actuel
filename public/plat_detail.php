@@ -14,7 +14,7 @@ $mon_plats = afficherLesPlats($plat_id);
 ?>
 
 
-
+<?php include_once('../menu.php'); ?>
 
 <div class="row">
   <div class="mt-5">
@@ -25,20 +25,31 @@ $mon_plats = afficherLesPlats($plat_id);
   <?php
 foreach ($mon_plats as $plat) :?>
   
-  <div class="col-md-4 col-xs-12">
-    <!-- <div class="card"> -->
-    <a href="./public/categorie_detail.php?plat_id=<?php echo $plat -> id; ?>">
+  <div class="col-md-9 col-xs-12 mx-auto">
+    <div class="row">
+      <div class="col-4">
+         <!-- <div class="card"> -->
       <img
         src="./images_the_district/fooda_actuel/<?=$plat-> image?>"
         class="img-responsive mw-100" style="width:400px;"
         alt="..."
      />
+      </div>
+      <div class="col-5">
+      <h5 class="card-title"><?=$plat -> libelle?></h5>
+      <p><?=$plat -> description?></p>
+      <button>Commander</button>
+      </div>
+  </div>
+</div>
+   
       <!-- <div class="card-body" style="width: 500px"> -->
-        <h5 class="card-title"><?=$plat -> libelle?></h5>
+       
       <!-- </div> -->
     <!-- </div> -->
 
-  </a>
+  <!-- </a> -->
   </div>
   <?php endforeach; ?>
 </div>
+<?php include_once('../footer.php') ?>
