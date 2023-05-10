@@ -38,7 +38,8 @@ foreach ($mon_plats as $plat) :?>
       <div class="col-5">
       <h5 class="card-title"><?=$plat -> libelle?></h5>
       <p><?=$plat -> description?></p>
-      <button>Commander</button>
+      <a href="commande.php">
+      <button type="submit">Commander</button></a>
       </div>
   </div>
 </div>

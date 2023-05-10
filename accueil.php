@@ -39,10 +39,10 @@ include('header.php');
               <a class="nav-link fs-3" href="public/contact.php">Contact</a>
             </li>
             
-            <div><a>
-                <button class="btn" id="dispayform">Se connecter</button>
+            <div><a href="public/connexion.php">
+            <button class="btn" id="dispayform">Se connecter</button>
             </a></div>
-      
+            
            
           </ul>
         </div>

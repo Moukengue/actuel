@@ -7,7 +7,7 @@ include "../db.php";
 <body>
     <?php include_once('menu_admin.php'); ?>
 
-    <form action="script/script_categorie_modif.php">
+    <form action="script/script_categorie_modif.php"  method="post">
     <div class="mb-3 mt-3">
       <label for="email">Email:</label>
       <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">

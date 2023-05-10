@@ -12,7 +12,7 @@ if ($plat == null) {
 <body>
     <?php include_once('menu_admin.php'); ?>
 
-  <form action="script/script_plat_modif.php">
+  <form action="script/script_plat_modif.php"  method="post">
     <div class="mb-3 mt-3">
       <label for="libelle">Libelle:</label>
       <input type="text" class="form-control" id="libelle" placeholder="Enter libelle" name="libelle">

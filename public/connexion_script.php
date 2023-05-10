@@ -7,16 +7,16 @@ if(isset($_POST['submit'])){
 
     if(!empty($_POST['email']) and !empty($_POST['mdp'])){
         $email = htmlspecialchars($_POST['email']);
-        $mdp = sha1($_POST['mdp']);
+        $mdp = $_POST['mdp'];
        
         
-        $recupUser =$db->prepare('SELECT* FROM utilisateur WHERE uti_mail = ? AND uti_mdp = ?');
+        $recupUser =$db->prepare('SELECT* FROM utilisateur WHERE email = ? AND password = ?');
         $recupUser->execute(array($email,$mdp));
         if($recupUser->rowcount() > 0){
             $_SESSION['email'] = $email;
             $_SESSION['id'] = $recupUser->fetch()['id'];
           
-           header('Location: accueil.php');
+           header('Location: ../accueil.php');
            exit;
  
  
