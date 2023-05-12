@@ -38,9 +38,11 @@ $mon_resultat_plats = afficherTousLesPlatsParCategorie($categorie);
               <div>
                 <p><?= $plat->description ?></p>
               </div>
-
-              <a href="commande.php">
-      <button type="submit">Commander</button></a>
+              <form method="post" action="commande.php">
+            <input type="hidden" name="plat" value="<?php echo $plat->id; ?>" />
+          <button type="submit">Commander</button>
+        <!-- </a> -->
+          </form>
             </div>
           </div>
         </div>

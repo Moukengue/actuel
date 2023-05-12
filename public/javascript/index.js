@@ -4,3 +4,6 @@ function chamar_funcao(parametro) {
     xhr.open("GET", url, true);
     xhr.send();
 }
+
+
+

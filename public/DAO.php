@@ -233,6 +233,18 @@ function cherche_plat($recherche){
 
 
 }
+//affiche les plats fiche commande
+function afficherLesPlatsCommande($id){
+    $db = ConnexionBase();
+    $requete =  $db->prepare(" SELECT prix,libelle,description,image FROM plat WHERE id = :id ");
+    $requete->bindValue(':id', $id);
+    $requete->execute();
+    $resultat = $requete->fetch(PDO::FETCH_OBJ);
+    $requete->closeCursor();
+    return  $resultat;
+ }
+
 
 
 ?>
+

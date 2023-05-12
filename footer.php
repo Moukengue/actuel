@@ -32,14 +32,16 @@
 </svg> whatsapp
               </a>
 
-              
+              <a href="confid.php">Politique de confidentialité</a>
+              <a href="Mention.php">Informations légales</a>
+              <p class="text-center">2023 Deleloppé par- M.Aline <a href="#">Vivi</a></p>
 
               
-              </div>
               
             
               
             </div>
+            
         
     </div>
     <script
