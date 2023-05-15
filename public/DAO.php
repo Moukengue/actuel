@@ -236,7 +236,7 @@ function cherche_plat($recherche){
 //affiche les plats fiche commande
 function afficherLesPlatsCommande($id){
     $db = ConnexionBase();
-    $requete =  $db->prepare(" SELECT prix,libelle,description,image FROM plat WHERE id = :id ");
+    $requete =  $db->prepare(" SELECT id, prix,libelle,description,image FROM plat WHERE id = :id ");
     $requete->bindValue(':id', $id);
     $requete->execute();
     $resultat = $requete->fetch(PDO::FETCH_OBJ);
@@ -244,6 +244,37 @@ function afficherLesPlatsCommande($id){
     return  $resultat;
  }
 
+ function creation_commande($id_plat, $quantite_client, $total, $date_commande, $etat_commande, $nom_client, $numero_client, $email_client, $adresse_client){
+
+    $db = ConnexionBase();
+
+    try{
+        $db->beginTransaction();
+        $requete = $db->prepare("INSERT INTO commande (id_plat,quantite,total,date_commande,etat,nom_client,telephone_client,email_client,adresse_client) 
+                                values (:id_plat,:quantite_client,:total,:date_commande,:etat_commande,:nom_client,:numero_client,:email_client,:adresse_client)");
+        $requete->bindValue(':id_plat',$id_plat);
+        $requete->bindValue(':quantite_client',$quantite_client);
+        $requete->bindValue(':total',$total);
+        $requete->bindValue(':date_commande',$date_commande);
+        $requete->bindValue(':etat_commande',$etat_commande);
+        $requete->bindValue(':nom_client',$nom_client);
+        $requete->bindValue(':numero_client',$numero_client);
+        $requete->bindValue(':email_client',$email_client);
+        $requete->bindValue(':adresse_client',$adresse_client);
+
+        $requete->execute();
+        $db->commit();
+        $reponse = "OK";
+        
+    }catch(PDOException $e) {
+        // En cas d'erreur, annuler la transaction
+        $db->rollback();
+        $reponse = "KO";
+        echo "Erreur : " . $e->getMessage();
+ }
+ return $reponse;
+
+}
 
 
 ?>

@@ -7,3 +7,19 @@ function chamar_funcao(parametro) {
 
 
 
+function calculer_total(){
+
+    var prix = document.getElementById("prix").value;
+    var quantite = document.getElementById("quantite").value;
+    var total = document.getElementById("total");
+    
+    var total_commande = prix * quantite;
+    
+    // console.log(total_commande);
+    total.textContent = total_commande + " euros";
+
+    // return total;
+}
+
+
+

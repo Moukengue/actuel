@@ -10,11 +10,12 @@ if(isset($_POST['submit'])){
         $mdp = $_POST['mdp'];
        
         
-        $recupUser =$db->prepare('SELECT* FROM utilisateur WHERE email = ? AND password = ?');
+        $recupUser =$db->prepare('SELECT prenom FROM utilisateur WHERE email = ? AND password = ?');
         $recupUser->execute(array($email,$mdp));
         if($recupUser->rowcount() > 0){
             $_SESSION['email'] = $email;
             $_SESSION['id'] = $recupUser->fetch()['id'];
+            $_SESSION['prenom'] = $prenom;
           
            header('Location: ../accueil.php');
            exit;
