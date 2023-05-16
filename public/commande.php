@@ -26,7 +26,7 @@ $plat = afficherLesPlatsCommande($id_plat);
         <h1>Commande</h1>
         <div class="row">
             <div class="col-2 text-left">
-                <img src="./images_the_district/fooda_actuel/<?= $plat->image ?>" class="img-responsive mw-100" style="width:400px;" alt="..." />
+                <img  src="./images_the_district/fooda_actuel/<?= $plat->image ?>" class="img-responsive mw-100" style="width:400px;" alt="..." />
             </div>
             <div class="col-4 text-left">
                 <h5><?= $plat->libelle ?></h5>
@@ -52,20 +52,20 @@ $plat = afficherLesPlatsCommande($id_plat);
 
                         <div class="form-group mt-2">
                             <label for="nom">Entrez votre nom</label>
-                            <input type="text" name="nom" class="form-control" id="nom" placeholder="">
+                            <input type="text" name="nom" class="form-control" id="nom"  size="50" maxlength="50" placeholder="Nom" required>
                         </div>
 
                         <div class="form-group">
                             <label for="adresse">Entrez votre Adresse</label>
-                            <input type="text"  name="adresse"class="form-control" id="adresse">
+                            <input type="text"  name="adresse"class="form-control" id="adresse" required>
 
                         </div>
                         <div class="form-group">
                             <label for="numero">Entrez votre numero</label>
-                            <input type="numero" name="numero" class="form-control" id="numero">
+                            <input type="numero" name="numero" class="form-control" id="numero"required>
                             <div class="form-group">
                                 <label for="email">Entrez votre mail</label>
-                                <input type="email" name="email" class="form-control" id="email" value="">
+                                <input type="email" name="email" class="form-control" id="email" value=""required>
                             </div>
                         </div>
             </div>
