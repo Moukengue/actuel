@@ -6,16 +6,24 @@ session_start();
 
  if(isset($_POST["nom"])){
     //retirer les balises html avec la fonction php strip_tags()!!
-    $nom_client = strip_tags($_POST["nom"]);
+    $nom= strip_tags($_POST["nom"]);
 }
 if(isset($_POST["prenom"])){
-    $prenom_client = $_POST["prenom"];
-}
-if(isset($_POST["adresse"])){
-    $adresse_client = $_POST["adresse"];
+    $prenom =  strip_tags  ($_POST["prenom"]);
 }
 
-$nouveau_utilisateur = creation_utilisateur($id,$email,$nom,$prenom,$password,$numero);
+if(isset($_POST["numero"])){
+    $numero = $_POST["numero"];
+}
+if(isset($_POST["mdp"])){
+    $password = $_POST["mdp"];
+}
+if(isset($_POST["email"])){
+    $email = $_POST["email"];
+}
+
+
+$nouveau_utilisateur = creation_utilisateur($email,$nom,$prenom,$password,$numero);
 if($nouveau_utilisateur == "ok"){
     // echo "Votre  enregistrément";
     header('Location: /accueil.php');

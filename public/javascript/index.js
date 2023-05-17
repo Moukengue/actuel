@@ -6,7 +6,7 @@ function chamar_funcao(parametro) {
 }
 
 
-
+//calcumer de la quantite dans le fichier commande
 function calculer_total(){
 
     var prix = document.getElementById("prix").value;
@@ -20,7 +20,7 @@ function calculer_total(){
 
     // return total;
 }
-
+//validation de fomulaire
 function validation_fomulaire(){
     var form = document.getElementById("form");
     var nom = document.getElementById("nom");

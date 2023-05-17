@@ -290,21 +290,21 @@ function creation_commande($id_plat, $quantite_client, $total, $date_commande, $
 
 
 //insert la table commande 
-function creation_utilisateur($id, $email, $nom, $prenom, $password, $numero)
+function creation_utilisateur($email, $nom, $prenom, $password, $numero)
 {
 
     $db = ConnexionBase();
 
     try {
         $db->beginTransaction();
-        $requete = $db->prepare("INSERT INTO utilisateur(id,email,nom,prenom,password,numero) values (:id,:email,:nom,:prenom,:password,:numero)");
+        $requete = $db->prepare("INSERT INTO utilisateur(email,nom,prenom,password,numero) values (:email,:nom,:prenom,:password,:numero)");
 
-        $requete->bindValue(':id', $id);
-        $requete->bindValue(':email', $email);
-        $requete->bindValue(':nom', $nom);
-        $requete->bindValue(':prenom', $prenom);
-        $requete->bindValue(':password', $password);
-        $requete->bindValue(':numero', $numero);
+      
+        $requete->bindValue(':email', $email,PDO::PARAM_STR);
+        $requete->bindValue(':nom', $nom,PDO::PARAM_STR);
+        $requete->bindValue(':prenom', $prenom,PDO::PARAM_STR);
+        $requete->bindValue(':password', $password,PDO::PARAM_STR);
+        $requete->bindValue(':numero', $numero,PDO::PARAM_STR);
         $requete->execute();
         $db->commit();
         $reponse = "OK";
