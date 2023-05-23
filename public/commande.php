@@ -76,6 +76,7 @@ $plat = afficherLesPlatsCommande($id_plat);
         <div class="d-grid gap-2 d-md-block">
                             <input type="hidden"  name="id_plat" class="form-control" value="<?= $plat->id ?>">
                             <input type="hidden" id="prix"  name="prix" class="form-control" value="<?= $plat->prix ?>">
+                            <input type="hidden" id="plat"  name="plat" class="form-control" value="<?= $plat->libelle ?>">
                             <button class="btn btn-primary" type="submit">Commander</button>
                             <a href="/accueil.php" class="btn btn-primary">Retour</a>
                         </div>

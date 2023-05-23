@@ -21,13 +21,14 @@ function calculer_total(){
     // return total;
 }
 //validation de fomulaire
-function validation_fomulaire(){
+function validation_fomulaire(e){
     var form = document.getElementById("form");
     var nom = document.getElementById("nom");
     var adresse = document.getElementById("adresse");
    var  numero = document.getElementById("numero");
     email = document.getElementById("email");
-     form.addEventListener('submit',  e=> )
+     
+    form.addEventListener('submit',  e )
 }
 
 
