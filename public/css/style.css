@@ -221,3 +221,30 @@ table tr th{
     justify-content: space-between;
 }
 
+/*css page new plat et categorie*/
+.new{
+    margin: 0px;
+    padding: 0px;
+    background-image: url(https://images.pexels.com/photos/3789885/pexels-photo-3789885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+  
+    
+    
+}
+.bonita{
+    margin-right: 1rem;
+    font-size: 1rem;
+    color: #c0392b;
+    
+  
+}
+

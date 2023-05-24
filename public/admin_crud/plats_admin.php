@@ -21,7 +21,11 @@ $requete->closeCursor();
     <div class="meio">
         <div class="pagine">
             <table class="table table-responsive table-hover">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+         <a class=" btn btn-primary mx-3" href="plat_new.php" role="button">Ajouter</a>
+      </div>
                 <thead>
+               
                     <tr>
                         <th class="text-center">Id</th>
                         <th class="text-center">Libelle</th>

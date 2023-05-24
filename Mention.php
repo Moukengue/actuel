@@ -11,9 +11,9 @@
     <p>240 avenue d'Argenteuil,92600 Asnières sur Seine</p>
     <p>Tél : 06 20 16 30 84</p>
     <p>Mail : contact@lesnovateurs.com</p>
-    <h2>Directeur de publication</h2>
-    <p>Alexandre BOUGEROL</p>
-    <p>Mail : alex@e-resto.fr</p>
+    <h2>Directrice de publication</h2>
+    <p>Aline Mouk</p>
+    <p>Mail : aline-the_disctric.fr</p>
     <h2>Hébergeur du site</h2>
     <p>OVH</p>
     <p>SAS au capital de 10.069.020 euros</p>

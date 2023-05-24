@@ -209,6 +209,19 @@ function get_categorie($id)
         $requete->closeCursor();
         return $categorie;
     }
+}   // form_utilisateur
+function get_utilisateur($id)
+{
+    if (!(isset($id)) || intval($id) <= 0) {
+        return null;
+    } else {
+        $db = ConnexionBase();
+        $requete =  $db->prepare("SELECT * FROM utilisateur WHERE id = ?");
+        $requete->execute(array($id));
+        $utilisateur = $requete->fetch(PDO::FETCH_OBJ);
+        $requete->closeCursor();
+        return $utilisateur;
+    }
 }
 //form_plat
 function get_plat($id)
@@ -299,12 +312,65 @@ function creation_utilisateur($email, $nom, $prenom, $password, $numero)
         $db->beginTransaction();
         $requete = $db->prepare("INSERT INTO utilisateur(email,nom,prenom,password,numero) values (:email,:nom,:prenom,:password,:numero)");
 
-      
-        $requete->bindValue(':email', $email,PDO::PARAM_STR);
-        $requete->bindValue(':nom', $nom,PDO::PARAM_STR);
-        $requete->bindValue(':prenom', $prenom,PDO::PARAM_STR);
-        $requete->bindValue(':password', $password,PDO::PARAM_STR);
-        $requete->bindValue(':numero', $numero,PDO::PARAM_STR);
+
+        $requete->bindValue(':email', $email, PDO::PARAM_STR);
+        $requete->bindValue(':nom', $nom, PDO::PARAM_STR);
+        $requete->bindValue(':prenom', $prenom, PDO::PARAM_STR);
+        $requete->bindValue(':password', $password, PDO::PARAM_STR);
+        $requete->bindValue(':numero', $numero, PDO::PARAM_STR);
+        $requete->execute();
+        $db->commit();
+        $reponse = "OK";
+    } catch (PDOException $e) {
+        // En cas d'erreur, annuler la transaction
+        $db->rollback();
+        $reponse = "KO";
+        echo "Erreur : " . $e->getMessage();
+    }
+    return $reponse;
+}
+//insert categorie fichier ajout
+function ajouter_categorie($libelle, $active, $image)
+{
+
+    $db = ConnexionBase();
+
+    try {
+        $db->beginTransaction();
+        $requete = $db->prepare("INSERT INTO categorie(libelle,active,image) values (:libelle,:active,:image)");
+
+
+        $requete->bindValue(':libelle', $libelle, PDO::PARAM_STR);
+        $requete->bindValue(':active', $active, PDO::PARAM_STR);
+        $requete->bindValue(':image', $image, PDO::PARAM_STR);
+        $requete->execute();
+        $db->commit();
+        $reponse = "OK";
+    } catch (PDOException $e) {
+        // En cas d'erreur, annuler la transaction
+        $db->rollback();
+        $reponse = "KO";
+        echo "Erreur : " . $e->getMessage();
+    }
+    return $reponse;
+}
+//insert plat fichier ajout
+function ajouter_plat($libelle, $description, $prix, $id_categorie, $active,$image)
+{
+
+    $db = ConnexionBase();
+
+    try {
+        $db->beginTransaction();
+        $requete = $db->prepare("INSERT INTO plat(libelle,description,prix,id_categorie,active,image) values (:libelle,:description,:prix,:id_categorie,:active,:image)");
+
+
+        $requete->bindValue(':libelle', $libelle, PDO::PARAM_STR);
+        $requete->bindValue(':description', $description, PDO::PARAM_STR);
+        $requete->bindValue(':prix', $prix, PDO::PARAM_STR);
+        $requete->bindValue(':id_categorie', $id_categorie, PDO::PARAM_STR);
+        $requete->bindValue(':active', $active, PDO::PARAM_STR);
+        $requete->bindValue(':image', $image, PDO::PARAM_STR);
         $requete->execute();
         $db->commit();
         $reponse = "OK";

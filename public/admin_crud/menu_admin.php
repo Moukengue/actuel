@@ -21,7 +21,7 @@
             <a class="nav-link fs-3" href="utilisateur_admin.php">Utilisateur</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-3" href="commande.php">Commande</a>
+            <a class="nav-link fs-3" href="commande_admin.php">Commande</a>
           </li>
           
         </ul>
