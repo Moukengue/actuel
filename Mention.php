@@ -23,6 +23,6 @@
     <p>Mail : contact@ovh.com</p>
     <h2>Gestion des cookies et politique de confidentialité</h2>
     <p><a href="confid.php">Clicquez ici pour accéder a la politique de confidentialité</a></p>
-    <p><a href="cond_generales.php">Cliquez ici accéder aux CGV</a></p>
+    <p><a href="cond_general.php">Cliquez ici accéder aux CGV</a></p>
     </div>
 </body>

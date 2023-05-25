@@ -6,17 +6,17 @@
         <h3>2. DEFINITIONS</h3>
         <p>Option : Désigne les Services payants pouvant être souscrits par le Restaurateur dans les conditions de l’Article 7.3 ci-après.</p>
         <p>Compte Personnel : Désigne le Compte Consommateur et/ou le Compte Restaurateur.</p>
-        <p>Compte Consommateur : Désigne le compte personnel créé par un Consommateur sur le Site e-Resto.</p>
+        <p>Compte Consommateur : Désigne le compte personnel créé par un Consommateur sur le The_district.</p>
         <p>Compte Restaurateur : Désigne le compte personnel créé par un Restaurateur sur l’Espace Restaurateur.</p>
         <p>Conditions Générales : Désigne les présentes conditions générales d’utilisation et de vente.</p>
-        <p>Consommateur : Désigne toute personne physique, agissant pour des besoins non professionnel, naviguant sur le Site e-Resto pour bénéficier des Services.</p>
+        <p>Consommateur : Désigne toute personne physique, agissant pour des besoins non professionnel, naviguant sur le Site  The_district pour bénéficier des Services.</p>
         <p>Contrat : Désigne le contrat conclu par application des Conditions Générales entre la Société et l’Utilisateur.</p>
         <p>Date de Souscription : A le sens qui lui est donné à l’Article 7.4.</p>
-        <p>Espace Restaurateur : Désigne l’espace disponible à l’adresse https://www.e-resto.fr sur lequel le Restaurateur peut créer un Compte Restaurateur.</p>
+        <p>Espace Restaurateur : Désigne l’espace disponible à l’adresse https://www. the_district.fr sur lequel le Restaurateur peut créer un Compte Restaurateur.</p>
         <p>Identifiants : Désigne l’ensemble des informations propres à chaque Utilisateur composées d’un identifiant et d’un mot de passe de sécurisé choisi par l’Utilisateur afin de pouvoir accéder à son propre Compte Personnel.</p>
         <p>Restaurateur : Désigne toute personne physique ou morale, professionnel de la restauration, utilisant les Services.</p>
         <p>Services : Désigne les services décrits à l’Article 5.</p>
-        <p>Site e-Resto : Désigne le site internet accessible à l’adresse https://www.e-resto.fr/.</p>
+        <p>Site e-Resto : Désigne le site internet accessible à l’adresse https://www. the_district.fr/.</p>
         <p>Société : Désigne la société LES NOVATEURS SAS telle qu’identifiée en tête des présentes Conditions Générales.</p>
         <p>Utilisateur : Désigne le Consommateur et/ou le Restaurateur.</p>
         <h2>3. DUREE</h2>
@@ -52,13 +52,13 @@
     <h2>7.1. Création d’un Compte Restaurateur sur l’Espace Restaurateur</h2>
     <p>Pour rejoindre la communauté et accéder aux Services, le Restaurateur doit créer un Compte Restaurateur sur l’Espace Restaurateur en renseignant les informations requises. Le Restaurateur pourra ensuite lier son Compte Restaurateur à un ou plusieurs de ses établissements.</p>
     <p>Dès la création d’un Compte Restaurateur, le Restaurateur reçoit un email de vérification pour lui transmettre ses Identifiants permettant d’accéder à son Compte Restaurateur.</p>
-    <p>Le Restaurateur veillera à conserver et tenir secret ses Identifiants. En cas d’oubli, il peut se rendre sur la page https://www.e-resto.fr/password/reset afin de récupérer ses Identifiants.</p>
+    <p>Le Restaurateur veillera à conserver et tenir secret ses Identifiants. En cas d’oubli, il peut se rendre sur la page https://www. the_district.fr/password/reset afin de récupérer ses Identifiants.</p>
     <p>Tout Restaurateur reconnaît et accepte que la Société demeure libre de refuser la création de tout Compte Restaurateur dans le cas où les informations essentielles n’auraient pas été communiquées par le Restaurateur ou si celles-ci ne permettaient pas d’identifier l’activité commerciale de la société.</p>
     <p>Sur son Compte Restaurateur, le Restaurateur peut gérer la communication de son restaurant en indiquant et modifiant à tout moment les informations relatives au restaurant, notamment le contenu des menus et les horaires de commandes et de collectes, et renseigner toutes autres informations nécessaires à une utilisation optimale des Services.</p>
     <h2>7.2. Services gratuits</h2>
     <p>Le Restaurateur bénéficie à titre gratuit des Services de base suivants :</p>
     <ul>
-        <li>Diffusion de ses menus sur le Site e-Resto, sur sa page Facebook, et sur son propre site internet,</li>
+        <li>Diffusion de ses menus sur le Site  the_district, sur sa page Facebook, et sur son propre site internet,</li>
         <li>Programmation des menus, des jours et horaires d’ouverture, de commandes et de collecte,</li>
         <li>Accès au tableau de bord avec des statistiques globales, la liste des commandes reçues et leur détail.</li>
     </ul>
@@ -67,7 +67,7 @@
     <p>Plusieurs offres commerciales facultatives sont proposées au Restaurateur.</p>
     <p>Le Restaurateur a la possibilité de souscrire aux options depuis son Compte Restaurateur.</p>
     <p>Le Restaurateur demeurera libre de choisir la formule la plus adaptée à ses besoins.</p>
-    <p>Les conditions tarifaires des différentes options figurent sur le Site e-Resto et sont également accessibles depuis le tableau de bord du Restaurateur. Le Restaurateur pourra également à tout moment demander à la Société la communication des tarifs relatifs aux différentes options.</p>
+    <p>Les conditions tarifaires des différentes options figurent sur le Site  The_district et sont également accessibles depuis le tableau de bord du Restaurateur. Le Restaurateur pourra également à tout moment demander à la Société la communication des tarifs relatifs aux différentes options.</p>
     <p>La Société se réserve le droit de modifier à tout moment les tarifs en vigueur sous réserve d’en informer le Restaurateur au préalable. Le Restaurateur demeurera libre de résilier à tout moment son option depuis son interface Restaurateur. La résiliation prendra effet immédiatement. L’Option se poursuit par tacite reconduction par période d’un mois.</p>
     <p>Dans l’hypothèse où, pour quelle que raison que ce soit, le paiement n’aurait pas lieu, la Société se réserve le droit de résilier de plein droit le présent Contrat sans préavis ni formalité judiciaire par simple notification écrite.</p>
     <h2>7.4. Modalités de facturation et paiement</h2>
@@ -105,8 +105,8 @@ Utiliser le Site e-Resto afin d’embarrasser, de menacer, harceler ou d’envah
 <p>En cas de perte, de vol ou d’utilisation frauduleuse d’un de ses Identifiants, l’Utilisateur sera seul responsable de toute conséquence dommageable, à l’exclusion de toute responsabilité de la Société.</p>
 <p>La Société se réserve le droit de suspendre, restreindre l’accès ou fermer un Compte Personnel si la Société est informée de tout usage anormal d’un Compte Personnel ou si la Société a des raisons légitimes de penser que le Compte Personnel a été piraté ou que son utilisation est contraire aux dispositions des Conditions Générales.</p>
 <h1>10. FONCTIONNEMENT DU SITE INTERNET</h1>
-<h2>10.1. Mise à jour du Site e-Resto</h2>
-<p>La Société se garde le droit de modifier les informations présentes sur le Site e-Resto à n’importe quel moment. Il appartient à l’Utilisateur de suivre l’évolution des informations publiées.</p>
+<h2>10.1. Mise à jour du Site  The_district</h2>
+<p>La Société se garde le droit de modifier les informations présentes sur le Site  The_district à n’importe quel moment. Il appartient à l’Utilisateur de suivre l’évolution des informations publiées.</p>
 <p>Ces mises à jour permettront de proposer de nouvelles fonctionnalités, de fournir des mises à jour de sécurité ou des corrections de bugs.</p>
 <p>Ces mises à jour sont donc soumises aux termes des présentes Conditions Générales, sauf si ces mises à jour sont accompagnées de conditions distinctes.</p>
 <h2>10.2. Maintenance du Site e-Resto</h2>

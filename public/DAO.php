@@ -307,10 +307,17 @@ function creation_utilisateur($email, $nom, $prenom, $password, $numero)
 {
 
     $db = ConnexionBase();
+    $requete = $db->prepare("SELECT email FROM utilisateur 
+    WHERE email = ?");
+    $requete->execute(array($email));
+    $requete->closeCursor();
 
+
+    
     try {
         $db->beginTransaction();
         $requete = $db->prepare("INSERT INTO utilisateur(email,nom,prenom,password,numero) values (:email,:nom,:prenom,:password,:numero)");
+        
 
 
         $requete->bindValue(':email', $email, PDO::PARAM_STR);
@@ -354,31 +361,5 @@ function ajouter_categorie($libelle, $active, $image)
     }
     return $reponse;
 }
-//insert plat fichier ajout
-function ajouter_plat($libelle, $description, $prix, $id_categorie, $active,$image)
-{
-
-    $db = ConnexionBase();
-
-    try {
-        $db->beginTransaction();
-        $requete = $db->prepare("INSERT INTO plat(libelle,description,prix,id_categorie,active,image) values (:libelle,:description,:prix,:id_categorie,:active,:image)");
 
 
-        $requete->bindValue(':libelle', $libelle, PDO::PARAM_STR);
-        $requete->bindValue(':description', $description, PDO::PARAM_STR);
-        $requete->bindValue(':prix', $prix, PDO::PARAM_STR);
-        $requete->bindValue(':id_categorie', $id_categorie, PDO::PARAM_STR);
-        $requete->bindValue(':active', $active, PDO::PARAM_STR);
-        $requete->bindValue(':image', $image, PDO::PARAM_STR);
-        $requete->execute();
-        $db->commit();
-        $reponse = "OK";
-    } catch (PDOException $e) {
-        // En cas d'erreur, annuler la transaction
-        $db->rollback();
-        $reponse = "KO";
-        echo "Erreur : " . $e->getMessage();
-    }
-    return $reponse;
-}

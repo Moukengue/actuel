@@ -6,7 +6,7 @@ if ($utilisateur  == null) {
   header("Location: plats_admin.php");
 }
 ?>
-?>
+
 
 <body>
     <?php include_once('menu_admin.php'); ?>

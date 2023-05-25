@@ -5,7 +5,7 @@
 
 La présente Politique de Confidentialité explique comment e-Resto collecte et utilise vos données personnelles. En utilisant les services d’e-Resto, vous consentez à ce qu’e-Resto utilise vos données personnelles de la manière décrite dans la présente Politique de Confidentialité.
 
-Soyez assuré que The district s’est engagé à collecter et utiliser vos données personnelles de manière responsable, sécurisée et en toute transparence. Si vous avez le moindre doute, ou une question, contactez-nous à alex@the_district.fr.</p>
+Soyez assuré que The district s’est engagé à collecter et utiliser vos données personnelles de manière responsable, sécurisée et en toute transparence. Si vous avez le moindre doute, ou une question, contactez-nous à aline-the_disctric.fr.</p>
  <h1> 1. Informations que nous collectons sur vous, et les raisons de cette collecte</h1>
   
  <p>Si vous souhaitez obtenir de plus amples informations sur une section particulière, vous pouvez nous contacter.
@@ -57,7 +57,7 @@ Soyez assuré que The district s’est engagé à collecter et utiliser vos donn
 <h1>8. Mise à jour de cette Politique de Confidentialité</h1>
 <p>Nous pouvons, à tout moment et sans que vous en soyez préalablement informé, mettre à jour cette Politique de Confidentialité, pour plusieurs raisons : modifications légales, techniques, commerciales par exemple. Nous vous encourageons donc à consulter régulièrement cette page afin de vous tenir informé de sa mise à jour, des dernières informations sur notre Politique de Confidentialité.</p>
 <h1>9.Coordonnées pour nous contacter </h1>
-<p>Pour toute question, demande d’informations supplémentaires, ou préoccupation concernant notre Politique de Confidentialité ou nos services, vous pouvez nous contacter sur : alex@e-resto.fr.</p>
+<p>Pour toute question, demande d’informations supplémentaires, ou préoccupation concernant notre Politique de Confidentialité ou nos services, vous pouvez nous contacter sur : aline-the_disctric.fr</p>
 
 
 
