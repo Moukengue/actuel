@@ -1,5 +1,5 @@
 <?php
-include('../../header.php');
+include('../header.php');
 
 include "../DAO.php";
 $plat = get_plat($_GET['id']);

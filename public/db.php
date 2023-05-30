@@ -3,6 +3,9 @@ function ConnexionBase() {
 
     try 
     {
+        
+        //connexion à la bdd phpmyadmin sur le serveur chez moi
+       // $connexion = new PDO('mysql:host=localhost;charset=utf8;dbname=the_district', 'root', '');
         //connexion à la bdd phpmyadmin sur le serveur
         // $connexion = new PDO('mysql:host=localhost;charset=utf8;dbname=aline', 'aline', 'mpiervine');
 

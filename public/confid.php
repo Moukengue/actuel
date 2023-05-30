@@ -1,4 +1,10 @@
+<?php
+    include "DAO.php";
+    include('header.php');
+?>
+
 <body>
+<?php include_once('menu.php'); ?>
     <div class= align-content-center>
     <h1>Politique de confidentialité</h1>
     <p>Chez The_district, notre mission est d’aider les restaurateurs à augmenter leur chiffre d’affaires, en proposant leurs plats à la vente à emporter, ou en livraison, par l’intermédiaire d’un service de click and collect personnalisé et intuitif. Si nous nous engageons à créer ainsi une grande communauté alimentaire, nous nous devons de protéger la vie privée des membres de cette communauté e-Resto. Cette protection inclut la protection des données personnelles de tous les visiteurs et utilisateurs du site internet, ainsi que des autres extensions (application mobile, espace restaurateur, espace client).
@@ -68,3 +74,5 @@ Soyez assuré que The district s’est engagé à collecter et utiliser vos donn
     </div>
    
 </body>
+<?php
+  include_once('footer.php') ?>

@@ -1,5 +1,5 @@
 <?php
-include('../../header.php');
+include('../header.php');
 
 include "../db.php";
 $db = connexionBase();

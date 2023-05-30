@@ -1,6 +1,6 @@
 <?php
 include "../db.php";
-include('../../header.php');
+include('../header.php');
 $db = connexionBase();
 $requete = $db->query("SELECT plat.id,plat.libelle,plat.description,plat.prix,plat.image,plat.id_categorie,plat.active FROM plat;");
 $plats = $requete->fetchAll(PDO::FETCH_OBJ);
@@ -8,7 +8,7 @@ $requete->closeCursor();
 ?>
 
 <body>
-<?php include_once('menu_admin.php');?>
+<?php include_once('./menu_admin.php');?>
     <h1>Admin Plats</h1>
     <div class="division"></div>
     <div class="menu">

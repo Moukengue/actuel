@@ -1,6 +1,6 @@
 <?php
 include "../db.php";
-include('../../header.php');
+include('../header.php');
 $db = connexionBase();
 $requete = $db->query("SELECT * FROM plat");
 $plats = $requete->fetchAll(PDO::FETCH_OBJ);
@@ -42,7 +42,7 @@ $requete->closeCursor();
             </div>
             <div class="d-grid gap-2 d-md-block">
                 <button class="btn btn-primary" type="submit">Ajouter</button>
-                <a href="accueil.php" class="btn btn-primary">Retour</a>
+                <a href="../accueil.php" class="btn btn-primary">Retour</a>
             </div>
         </form>
         <?php

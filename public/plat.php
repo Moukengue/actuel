@@ -1,5 +1,5 @@
 <?php
-include('../header.php');
+include('header.php');
 include "DAO.php";
 $plats = affichePlat();
 
@@ -9,14 +9,14 @@ $plats = affichePlat();
 
 
   <body>
-  <?php include_once('../menu.php'); ?>
+  <?php include_once('menu.php'); ?>
   
     <!---Les plats-->
    
     <div class="row">
     <?php foreach ($plats as $plat):?>
       <div class="col">
-      <a href="plat_detail.php?plat_id=<?php echo $plat->id; ?>">
+      <a href="plat_detail.php?plat_id=<?php echo $plat->id; ?>" class="text-decoration-none">
         <div class="card">
           <img
           src= "images_the_district/fooda_actuel/<?=$plat -> image?>"class="img-responsive mw-100"
@@ -38,6 +38,6 @@ $plats = affichePlat();
 
     <!--fin plats-->
     <?php 
-include_once('../footer.php') ?>
+include_once('footer.php') ?>
     
 

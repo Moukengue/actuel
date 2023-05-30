@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg mb-2" id="img_color">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="accueil.php">
           <img
-          src="/public/images_the_district/the_district_brand/logo_transparent_sm.png" height="100px"
+          src="images_the_district/the_district_brand/logo_transparent_sm.png" height="100px"
             alt="logo"
             
           />
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link fs-3" href="../accueil.php">Accueil</a>
+              <a class="nav-link fs-3" href="accueil.php">Accueil</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fs-3" href="categorie.php">Categorie</a>

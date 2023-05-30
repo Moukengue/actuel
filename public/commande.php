@@ -1,7 +1,7 @@
 <?php
 // $id = $_GET['id'];
 include('DAO.php');
-include('../header.php');
+include('header.php');
 
 if (isset($_POST["plat"])) {
     $id_plat = $_POST["plat"];
@@ -21,12 +21,12 @@ $plat = afficherLesPlatsCommande($id_plat);
 
 <body>
 
-    <?php include_once('../menu.php'); ?>
+    <?php include_once('menu.php'); ?>
     <div class="container">
         <h1>Commande</h1>
         <div class="row">
             <div class="col-2 text-left">
-                <img  src="./images_the_district/fooda_actuel/<?= $plat->image ?>" class="img-responsive mw-100" style="width:400px;" alt="..." />
+                <img  src="images_the_district/fooda_actuel/<?= $plat->image ?>" class="img-responsive mw-100" style="width:400px;" alt="..." />
             </div>
             <div class="col-4 text-left">
                 <h5><?= $plat->libelle ?></h5>
@@ -88,4 +88,4 @@ $plat = afficherLesPlatsCommande($id_plat);
     </script>
 
 
-    <?php include_once "../footer.php"; ?>
+    <?php include_once "footer.php"; ?>

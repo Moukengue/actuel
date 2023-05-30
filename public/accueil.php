@@ -1,5 +1,5 @@
 <?php
-include "./public/DAO.php";
+include "DAO.php";
 
 include('header.php');
 // $cat = afficherCategories();
@@ -12,7 +12,7 @@ include('header.php');
   <nav class="navbar navbar-expand-lg " id="img_color">
     <div class="container-fluid lili">
       <a class="navbar-brand" href="#">
-        <img src="/public/images_the_district/the_district_brand/logo_transparent_sm.png" height="100px" alt="logo" />
+        <img src="images_the_district/the_district_brand/logo_transparent_sm.png" height="100px" alt="logo" />
 
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,16 +27,16 @@ include('header.php');
             <a class="nav-link fs-3" href="">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-3" href="public/categorie.php">Categorie</a>
+            <a class="nav-link fs-3" href="categorie.php">Categorie</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-3" href="public/plat.php">Plats</a>
+            <a class="nav-link fs-3" href="plat.php">Plats</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fs-3" href="public/contact.php">Contact</a>
+            <a class="nav-link fs-3" href="contact.php">Contact</a>
           </li>
 
-          <div class="nav-item"><a  class="nav-link fs-3" href="public/connexion.php">
+          <div class="nav-item"><a  class="nav-link fs-3" href="connexion.php">
               <button class="btn mx-2 " id="dispayform">Se connecter</button>
             </a></div>
 
@@ -63,10 +63,10 @@ include('header.php');
     $categories = afficherCategoriesPopulaire();
     //L'instruction foreach permet de parcourir un tableau et d'extraire chaque élément.foreach est une boucle
     foreach ($categories as $categorie) : ?>
-      <a href="./public/categorie_detail.php?categorie_id=<?php echo $categorie->id; ?>">
+      <a href="categorie_detail.php?categorie_id=<?php echo $categorie->id; ?>" class="text-decoration-none">
         <div class="col">
           <div class="card">
-            <img src="./public/images_the_district/category_actuel/<?= $categorie->image ?>" class="" alt="..." />
+            <img src="images_the_district/category_actuel/<?= $categorie->image ?>" class="" alt="..." />
             <div class="card-body" style="width: 500px">
               <h5 class="card-title"><?= $categorie->libelle ?></h5>
             </div>
@@ -83,9 +83,9 @@ include('header.php');
     <?php
     $plats = lesPlatsLesPlusVendus();
     foreach ($plats as $plat) : ?>
-      <a href="public/plat_detail.php?plat_id=<?php echo $plat->id; ?>">
+      <a href="plat_detail.php?plat_id=<?php echo $plat->id; ?>" class="text-decoration-none">
         <div class="card m-3">
-          <img src="./public/images_the_district/fooda_actuel/<?= $plat->image; ?> " class="img-responsive mw-100" class="card-img-top" />
+          <img src="images_the_district/fooda_actuel/<?= $plat->image; ?> " class="img-responsive mw-100" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title"><?= $plat->libelle ?></h5>
           </div>

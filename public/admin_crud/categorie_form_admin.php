@@ -1,5 +1,5 @@
 <?php
-include('../../header.php');
+include('../header.php');
 include "../DAO.php";
 $categorie = get_categorie($_GET['id']);
 if ($categorie == null) {

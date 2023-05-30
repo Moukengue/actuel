@@ -1,5 +1,5 @@
 <?php
-include('../../header.php');
+include('../header.php');
 include "../DAO.php";
 $utilisateur  = get_utilisateur($_GET['id']);
 if ($utilisateur  == null) {

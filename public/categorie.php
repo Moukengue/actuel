@@ -1,18 +1,18 @@
 <?php
 include "DAO.php";
-include('../header.php');
+include('header.php');
 $categories = lesCategoriesActive();
 
 // $cat = afficherCategories();
 
 ?>
   <body>
-  <?php include_once('../menu.php'); ?>
+  <?php include_once('menu.php'); ?>
    
     <!---Les categories-->
     <div class="row row-cols-1 row-cols-md-3 g-4">
     <?php foreach ($categories as $categorie) :?>
-      <a href="categorie_detail.php?categorie_id=<?php echo $categorie -> id; ?>">
+      <a href="categorie_detail.php?categorie_id=<?php echo $categorie -> id; ?>" class="text-decoration-none">
       <div class="col">
         <div class="card">
           <img
@@ -30,6 +30,6 @@ $categories = lesCategoriesActive();
     </div>
 
     <!--fin categorie-->
-    <?php include_once('../footer.php') ?>
+    <?php include_once('footer.php') ?>
     
 

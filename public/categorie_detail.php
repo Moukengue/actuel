@@ -1,6 +1,6 @@
 <?php
 include('DAO.php');
-include('../header.php');
+include('header.php');
 
 if (isset($_GET["categorie_id"])) {
   //var_dump($_GET["categorie_id"]);
@@ -10,7 +10,7 @@ if (isset($_GET["categorie_id"])) {
 $mon_resultat_plats = afficherTousLesPlatsParCategorie($categorie);
 
 ?>
-<?php include_once('../menu.php'); ?>
+<?php include_once('menu.php'); ?>
 
 <div class="row">
   <div class="mt-5">
@@ -29,7 +29,7 @@ $mon_resultat_plats = afficherTousLesPlatsParCategorie($categorie);
             <div class="col-4">
               <div>
                 <a href="plat_detail.php?plat_id=<?php echo $plat->id; ?>">
-                  <img src="./images_the_district/fooda_actuel/<?= $plat->image ?>" class="img-responsive w-100" style="max-width:400px;" alt="..." />
+                  <img src="images_the_district/fooda_actuel/<?= $plat->image ?>" class="img-responsive w-100" style="max-width:400px;" alt="..." />
                 </a>
               </div>
             </div>
@@ -50,4 +50,4 @@ $mon_resultat_plats = afficherTousLesPlatsParCategorie($categorie);
     </div>
   <?php endforeach; ?>
 </div>
-<?php include_once('../footer.php') ?>
+<?php include_once('footer.php') ?>

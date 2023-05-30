@@ -5,7 +5,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once '../vendor/autoload.php';
+require_once 'vendor/autoload.php';
 
  include "DAO.php";
  $db=connexionbase();
@@ -74,7 +74,7 @@ if ($mail){
     try {
         $mail->send();
         // echo 'Email envoyé avec succès';
-        header('Location: /accueil.php');
+        header('Location:accueil.php');
         } catch (Exception $e) {
         echo "L'envoi de mail a échoué. L'erreur suivante s'est produite : ", $e->getMessage();
         }

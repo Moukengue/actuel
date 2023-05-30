@@ -2,7 +2,7 @@
 
 include "DAO.php"; ?>
 
-<?php include('../header.php'); ?>
+<?php include('header.php'); ?>
 
 <body class="modif">
     

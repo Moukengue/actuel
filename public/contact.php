@@ -1,4 +1,4 @@
-<?php include('../header.php');
+<?php include('header.php');
 ?>
 
 
@@ -31,6 +31,7 @@
         </div>
         <div class="pied-formulaire" align="center">
             <button>Envoyer le message</button>
+            <a href="accueil.php" class="btn btn-primary">Retour</a>
         </div>
     </form>
 </body>

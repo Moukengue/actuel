@@ -1,5 +1,5 @@
 <?php
-include_once './public/DAO.php';
+include_once 'public/DAO.php';
 
 if(isset($_POST["recherche"]))
 {
@@ -14,9 +14,9 @@ if(isset($_POST["recherche"]))
         <?php
         foreach($resultat as $rs):
             ?>
-            <a href="public/plat_detail.php?plat_id=<?php echo $rs->id; ?>">
+            <a href="plat_detail.php?plat_id=<?php echo $rs->id; ?>">
                 <div class="card m-3">
-                    <img src= "./public/images_the_district/fooda_actuel/<?=$rs ->image;?> "class="img-responsive mw-100" class="card-img-top" />
+                    <img src= "public/images_the_district/fooda_actuel/<?=$rs ->image;?> "class="img-responsive mw-100" class="card-img-top" />
                     <div class="card-body">
                         <h5 class="card-title"><?=$rs -> libelle?></h5>
                     </div>

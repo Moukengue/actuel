@@ -24,7 +24,7 @@ function afficherPlats()
 
 function afficherCategories()
 {
-    if (require("../db.php")) {
+    if (require("db.php")) {
         $requete =  $db->query("SELECT categorie.libelle, COUNT(plat.id) FROM  categorie 
         INNER JOIN plat
         ON  plat.id_categorie = categorie.id WHERE plat.active = 'yes' GROUP  BY categorie.libelle;");
@@ -140,7 +140,7 @@ function listeChifaffaire()
 
 function categoriePasta()
 {
-    if (require("../db.php")) {
+    if (require("db.php")) {
         $requete =  $db->query("SELECT *FROM plat 
         INNER JOIN categorie
         ON plat.id_categorie = categorie.id
@@ -218,6 +218,19 @@ function get_utilisateur($id)
         $db = ConnexionBase();
         $requete =  $db->prepare("SELECT * FROM utilisateur WHERE id = ?");
         $requete->execute(array($id));
+        $utilisateur = $requete->fetch(PDO::FETCH_OBJ);
+        $requete->closeCursor();
+        return $utilisateur;
+    }
+}
+
+// Comentaire connexion 
+function connexionUtilisateur($email)
+{
+    if(!empty($email)){
+        $db = ConnexionBase();
+        $requete =  $db->prepare("SELECT * FROM utilisateur WHERE email = ?");
+        $requete->execute(array($email));
         $utilisateur = $requete->fetch(PDO::FETCH_OBJ);
         $requete->closeCursor();
         return $utilisateur;

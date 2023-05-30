@@ -1,4 +1,6 @@
+<?php include('header.php');?>
 <body>
+<?php include_once('menu.php'); ?>
 <div class= align-content-center> 
     <h1>Mentions légales</h1>
     <h2>Société éditrice du site</h2>
@@ -26,3 +28,5 @@
     <p><a href="cond_general.php">Cliquez ici accéder aux CGV</a></p>
     </div>
 </body>
+<?php
+  include_once('footer.php') ?>

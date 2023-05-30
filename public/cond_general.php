@@ -1,3 +1,11 @@
+<?php
+    include "DAO.php";
+    include('header.php');
+?>
+
+<body>
+<?php include_once('menu.php'); ?>
+
 <div>
         <h1>Conditions générales de ventes</h1>
         <p>Les présentes Conditions Générales sont applicables à l’utilisation par l’Utilisateur des Services fournis sur le Site e-Resto par la société Les Novateurs, société par actions simplifiée, au capital social de 30.600 euros, ayant son siège social sis 240 avenue d’Argenteuil, 92600 Asnières sur Seine, immatriculée au Registre du Commerce et des Sociétés de Nanterre sous le numéro 828 758 607.</p>
@@ -198,3 +206,4 @@ Utiliser le Site e-Resto afin d’embarrasser, de menacer, harceler ou d’envah
 <p>Le fait pour l’une des parties de ne pas se prévaloir d’un manquement par l’autre partie, à l’une quelconque des obligations visées dans les présentes, ne saurait être interprété pour l’avenir comme une renonciation à l’obligation en cause.</p>
 
 </body>
+<?php include_once('footer.php') ?>
